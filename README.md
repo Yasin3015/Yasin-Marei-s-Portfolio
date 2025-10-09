@@ -77,9 +77,7 @@ npm run dev
 - **Next.js** – إطار عمل فوق React يدعم الـ SSR وتحسين محركات البحث.
 - **React** – لتطوير واجهات المستخدم بمكونات قابلة لإعادة الاستخدام.
 - **HTML5 / CSS3 / JavaScript** – أساسيات تطوير الويب.
-- **Tailwind CSS** (لو مستخدمه) – ستايلينج سريع باستخدام Utilities.
-- مكتبات إضافية زي: **Swiper, Recharts, Firebase**.
-
+- **Tailwind CSS**  – ستايلينج سريع باستخدام Utilities.
 ---
 
 ## 📂 المشاريع
@@ -106,10 +104,10 @@ npm run dev
 
 ```bash
 # انسخ المشروع
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/your-username/Yasin-Marei-s-Portfolio.git
 
 # ادخل على الفولدر
-cd portfolio
+cd Yasin-Marei-s-Portfolio
 
 # نزل المكتبات
 npm install
