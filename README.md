@@ -41,26 +41,6 @@ Built with **React, HTML5, CSS3, JS**.
 
 ---
 
-## 🖥️ Getting Started
-To run the portfolio locally:
-
-```bash
-# Clone the repo
-git clone https://github.com/your-username/Yasin-Marei-s-Portfolio.git
-
-# Navigate to the folder
-cd Yasin-Marei-s-Portfolio
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
-
-
----
-
-### 📄 README.ar.md (Arabic)
 
 ```markdown
 # 🌐 ياسين عبدالعال - البورتفوليو
@@ -110,16 +90,23 @@ npm run dev
 ## 🖥️ كيف تشغل المشروع
 لتشغيل البورتفوليو على جهازك المحلي:
 
+
+## 🖥️ Getting Started
+To run the portfolio locally:
+
 ```bash
-# انسخ المشروع
-git clone https://github.com/your-username/portfolio.git
+# Clone the repo
+git clone https://github.com/your-username/Yasin-Marei-s-Portfolio.git
 
-# ادخل على الفولدر
-cd portfolio
+# Navigate to the folder
+cd Yasin-Marei-s-Portfolio
 
-# نزل المكتبات
+# Install dependencies
 npm install
 
-# شغل السيرفر
+# Run the development server
 npm run dev
+
+
+---
 
