@@ -18,8 +18,7 @@ My portfolio highlights:
 - **Next.js** – Framework for React with SSR & SEO optimization.
 - **React** – Component-based UI development.
 - **HTML5 / CSS3 / JavaScript** – Core web technologies.
-- **Tailwind CSS** (if used) – Utility-first styling.
-- **Other Libraries** – Swiper, Recharts, Firebase, etc.
+- **Tailwind CSS** – Utility-first styling.
 
 ---
 
@@ -50,7 +49,7 @@ To run the portfolio locally:
 git clone https://github.com/your-username/Yasin-Marei-s-Portfolio.git
 
 # Navigate to the folder
-cd portfolio
+cd Yasin-Marei-s-Portfolio
 
 # Install dependencies
 npm install
