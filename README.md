@@ -56,10 +56,7 @@ npm install
 
 # Run the development server
 npm run dev
-
-
----
-
+```
 # 🌐 ياسين عبدالعال - البورتفوليو
 
 أهلاً بك في البورتفوليو الشخصي الخاص بي 👋  
