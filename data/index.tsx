@@ -71,6 +71,7 @@ export const projects = [
   img: "/e-learning.png",
   iconsList: ["/html.svg", "/css.svg", "/js.svg", "/react.svg"],
   link: "https://e-learning-test.netlify.app/",
+  sourceCode: "https://github.com/Yasin3015/e-learning"
 },
   {
     id: 3,
