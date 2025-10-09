@@ -19,7 +19,7 @@ function About() {
                 alt="Yasin Marei"
                 width={400}
                 height={400}
-                className="rounded-full w-full object-cover"
+                className="rounded-full w-full"
                 priority
               />
             </div>

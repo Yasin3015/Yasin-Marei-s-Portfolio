@@ -29,7 +29,7 @@ import {
 import { text } from "stream/consumers";
 import { z } from "zod";
 
-export const cvUrl ="https://drive.google.com/file/d/17mBn_eTKoEbAJ6XJIwDfHhrD3X5hu5bh/view?usp=drive_link";
+export const cvUrl ="https://drive.google.com/file/d/1PRAG0vqckHVg03YrcwuRt2-UbcA1qDCH/view?usp=sharing";
 export const projects = [
   {
   id: 20,
