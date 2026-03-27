@@ -109,10 +109,11 @@ export default function IntroLoader({
           </motion.div>
 
           {/* Phrases / Logo */}
-          <div className="relative z-10 flex flex-col items-center gap-3 px-6">
-            <AnimatePresence mode="wait">
-              {phase === 0 && (
+          <div className="relative z-10 flex flex-col items-center gap-6 px-6">
+            <AnimatePresence>
+              {phase < 3 && (
                 <motion.div
+                  layout
                   key="phase-logo"
                   initial={{ opacity: 0, scale: 0.9, filter: "blur(5px)" }}
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
@@ -120,7 +121,7 @@ export default function IntroLoader({
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className="flex items-center justify-center font-cairo"
                 >
-                  <svg width="140" height="160" viewBox="0 0 100 115" className="drop-shadow-2xl">
+                  <svg width="120" height="140" viewBox="0 0 100 115" className="drop-shadow-2xl">
                     {/* Hexagon Background */}
                     <motion.polygon 
                       points="50,5 93,30 93,80 50,105 7,80 7,30" 
@@ -162,14 +163,15 @@ export default function IntroLoader({
                 </motion.div>
               )}
 
-              {phase === 1 && (
+              {phase >= 1 && phase < 3 && (
                 <motion.div
+                  layout
                   key="phrase-1"
                   initial={{ opacity: 0, y: 18, filter: "blur(6px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   exit={{ opacity: 0, y: -14, filter: "blur(4px)" }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="flex flex-col items-center gap-2"
+                  className="flex flex-col items-center gap-2 -mt-2"
                 >
                   <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
                     {PHRASES[0].text}
@@ -185,8 +187,9 @@ export default function IntroLoader({
                 </motion.div>
               )}
 
-              {phase === 2 && (
+              {phase >= 2 && phase < 3 && (
                 <motion.div
+                  layout
                   key="phrase-2"
                   initial={{ opacity: 0, y: 18, filter: "blur(6px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -194,7 +197,7 @@ export default function IntroLoader({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className="flex flex-col items-center gap-3"
                 >
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight text-center leading-tight">
+                  <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white/90 tracking-tight text-center leading-tight">
                     {PHRASES[1].text}
                   </span>
                   {/* Animated dots */}
@@ -217,14 +220,6 @@ export default function IntroLoader({
                     ))}
                   </div>
                 </motion.div>
-              )}
-
-              {phase === 3 && (
-                <motion.div
-                  key="phase-exit"
-                  initial={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                />
               )}
             </AnimatePresence>
           </div>
