@@ -1,9 +1,35 @@
+"use client";
+
 import { FaArrowRight, FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { socialMedia } from "@/data";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 function Footer() {
+  const [socials, setSocials] = useState(socialMedia);
+
+  useEffect(() => {
+    const fetchSettings = async () => {
+      try {
+        const docSnap = await getDoc(doc(db, "settings", "global"));
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          const updatedSocials = [...socialMedia];
+          if (data.github) updatedSocials[0].link = data.github;
+          if (data.linkedin) updatedSocials[1].link = data.linkedin;
+          if (data.facebook) updatedSocials[2].link = data.facebook;
+          if (data.whatsapp) updatedSocials[3].link = data.whatsapp;
+          setSocials(updatedSocials);
+        }
+      } catch (error) {
+        console.error("Failed to fetch settings", error);
+      }
+    };
+    fetchSettings();
+  }, []);
   return (
     <div className="relative flex mt-14 h-[500px] w-full flex-col items-center justify-center !overflow-hidden rounded-lg md:shadow-xl">
       <footer className="w-full pt-20 pb-10 container z-10" id="contact">
@@ -33,7 +59,7 @@ function Footer() {
           </p>
 
           <div className="flex items-center md:gap-3 gap-6">
-            {socialMedia.map((info) => (
+            {socials.map((info) => (
               <Link
                 href={info.link}
                 target="_blank"

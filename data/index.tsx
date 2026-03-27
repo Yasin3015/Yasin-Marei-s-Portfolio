@@ -26,7 +26,6 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import { text } from "stream/consumers";
 import { z } from "zod";
 
 export const cvUrl ="https://drive.google.com/file/d/1PRAG0vqckHVg03YrcwuRt2-UbcA1qDCH/view?usp=sharing";
@@ -35,7 +34,7 @@ export const projects = [
   id: 20,
   title: "Salam4CC Website",
   des: "Modern responsive website for Salam for Cultural Communication, built with Next.js and React to showcase initiatives, programs, and publications with optimized performance and SEO.",
-  img: "/salam.png",
+  img: "salam",
   iconsList: ["/html.svg", "/css.svg", "/js.svg", "/react.svg", "/next.svg"],
   link: "https://salam4cc.org/",
 },
@@ -44,7 +43,7 @@ export const projects = [
     id: 0,
     title: "Fulk App Website",
     des: "Dynamic tourism platform showcasing travel packages and activities with real-time data. Developed using HTML5, CSS3, JavaScript, Bootstrap, React, and Firebase.",
-    img: "/fulk.png",
+    img: "fulk",
     iconsList: ["/html.svg", "/css.svg", "/js.svg", "/bootstrap-4.svg", "/react.svg", "/firebase.svg"],
     link: "https://fulk-app.web.app/",
   },
@@ -52,7 +51,7 @@ export const projects = [
     id: 1,
     title: "Knowticed App Website",
     des: "Tourism platform with trip booking, offers, and real-time management. Built with React and Firebase.",
-    img: "/Knowticed.png",
+    img: "Knowticed",
     iconsList: ["/html.svg", "/css.svg", "/js.svg", "/bootstrap-4.svg", "/react.svg", "/firebase.svg"],
     link: "https://knowticed.com/",
   },
@@ -60,7 +59,7 @@ export const projects = [
     id: 2,
     title: "Bayanatz Company Website",
     des: "Corporate website with responsive UI and real-time content management. Built using Bootstrap, JavaScript, and Firebase.",
-    img: "/Bayanatz.png",
+    img: "Bayanatz",
     iconsList: ["/html.svg", "/css.svg", "/js.svg", "/bootstrap-4.svg", "/firebase.svg"],
     link: "https://www.bayanatz.com/",
   },
@@ -68,7 +67,7 @@ export const projects = [
   id: 22,
   title: "E-Learning Pricing Demo",
   des: "Side project demo for an educational platform, featuring an interactive pricing section to showcase subscription plans. Built using HTML5, CSS3, JavaScript, and React.",
-  img: "/e-learning.png",
+  img: "e-learning",
   iconsList: ["/html.svg", "/css.svg", "/js.svg", "/react.svg"],
   link: "https://e-learning-test.netlify.app/",
   sourceCode: "https://github.com/Yasin3015/e-learning"
@@ -77,7 +76,7 @@ export const projects = [
     id: 3,
     title: "Viwege Travel Project",
     des: "Responsive travel project website with interactive design. Built using HTML5, CSS3, JavaScript, and Bootstrap.",
-    img: "/viewEg.png",
+    img: "viewEg",
     iconsList: ["/html.svg", "/css.svg", "/js.svg", "/bootstrap-4.svg"],
     link: "https://yasin3015.github.io/ViwegeTravelsDemo/",
     sourceCode: "https://github.com/Yasin3015/e-learning",
@@ -86,7 +85,7 @@ export const projects = [
     id: 6,
     title: "Online Courses Project",
     des: "Responsive online courses platform demo. Developed using HTML5, CSS3, JavaScript, and Bootstrap.",
-    img: "/online courses.png",
+    img: "online_courses",
     iconsList: ["/html.svg", "/css.svg", "/js.svg", "/bootstrap-4.svg"],
     link: "https://yasin3015.github.io/onlinecourses/",
     sourceCode: "https://github.com/Yasin3015/onlinecourses",
@@ -95,7 +94,7 @@ export const projects = [
     id: 7,
     title: "AZ Company Project",
     des: "Corporate demo website showcasing services. Built using HTML5, CSS3, and JavaScript.",
-    img: "/AZ.png",
+    img: "AZ",
     iconsList: ["/html.svg", "/css.svg", "/js.svg"],
     link: "https://yasin3015.github.io/AZ-Demo/",
     sourceCode: "https://github.com/Yasin3015/AZ-Demo",
@@ -104,7 +103,7 @@ export const projects = [
     id: 9,
     title: "Akira Website",
     des: "Demo website with responsive design. Built using HTML5, CSS3, JavaScript, and Bootstrap.",
-    img: "/Akira.png",
+    img: "Akira",
     iconsList: ["/html.svg", "/css.svg", "/js.svg", "/bootstrap-4.svg"],
     link: "https://yasin3015.github.io/akira/",
     sourceCode: "https://github.com/Yasin3015/akira",
@@ -113,7 +112,7 @@ export const projects = [
     id: 13,
     title: "Wealthy People",
     des: "Wealthy People is a Dynamic project fetching data from API. Built using HTML5, CSS3, and JavaScript.",
-    img: "/wealthy people.png",
+    img: "wealthy_people",
     iconsList: ["/html.svg", "/css.svg", "/js.svg"],
     link: "https://yasin3015.github.io/wealthypeople/",
     sourceCode: "https://github.com/Yasin3015/wealthypeople",
@@ -122,15 +121,14 @@ export const projects = [
     id: 15,
     title: "Typing Speed Test",
     des: "Simple Typing speed test app to test your typing skills. Built using HTML5, CSS3, Bootstrap, and JavaScript.",
-    img: "/Typing Skills.png",
+    img: "Typing_Skills",
     iconsList: ["/html.svg", "/css.svg", "/bootstrap-4.svg", "/js.svg"],
     link: "https://yasin3015.github.io/Typing-speedTest/",
     sourceCode: "https://github.com/Yasin3015/Typing-speedTest",
   }
 ];
 
-const date = new Date();
-const yearsOfExperience = date.getFullYear() - 2024;
+const yearsOfExperience = 2;
 const projectsCompleted = 15;
 const clients = 5;
 

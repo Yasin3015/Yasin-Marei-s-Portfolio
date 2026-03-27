@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={` ${cairo.variable} antialiased`}>
+      <body className={` ${cairo.variable} antialiased`} suppressHydrationWarning>
         <ScrollUp />
         {children}
       </body>
