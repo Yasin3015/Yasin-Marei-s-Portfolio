@@ -51,8 +51,19 @@ export default function Experience({
           // Sort oldest -> newest so the timeline flows naturally.
           setExperiences(
             data.sort((a, b) => {
-              const aMs = a.createdAt && typeof a.createdAt === "object" && "toMillis" in a.createdAt ? a.createdAt.toMillis() : a.createdAt;
-              const bMs = b.createdAt && typeof b.createdAt === "object" && "toMillis" in b.createdAt ? b.createdAt.toMillis() : b.createdAt;
+              const aMsRaw =
+                a.createdAt && typeof a.createdAt === "object" && "toMillis" in a.createdAt
+                  ? a.createdAt.toMillis()
+                  : a.createdAt;
+              const bMsRaw =
+                b.createdAt && typeof b.createdAt === "object" && "toMillis" in b.createdAt
+                  ? b.createdAt.toMillis()
+                  : b.createdAt;
+
+              const aMs = typeof aMsRaw === "number" ? aMsRaw : 0;
+              const bMs = typeof bMsRaw === "number" ? bMsRaw : 0;
+
+              if (aMs === bMs) return 0;
               return aMs > bMs ? 1 : -1;
             })
           );
