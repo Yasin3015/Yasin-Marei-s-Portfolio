@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
@@ -36,6 +36,22 @@ function TabButton({
 export default function WorkTabs() {
   const [activeTab, setActiveTab] = useState<TabKey>("projects");
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash === "#projects") {
+        setActiveTab("projects");
+      } else if (hash === "#experience") {
+        setActiveTab("experience");
+      }
+    };
+
+    handleHashChange(); // Check hash on mount
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
     <section className="container my-10">
       {/* anchors to keep existing nav working */}
@@ -53,12 +69,21 @@ export default function WorkTabs() {
           WORK
         </motion.div>
         <div className="flex items-center gap-3">
-          <TabButton active={activeTab === "projects"} onClick={() => setActiveTab("projects")}>
+          <TabButton 
+            active={activeTab === "projects"} 
+            onClick={() => {
+              setActiveTab("projects");
+              window.history.pushState(null, "", "#projects");
+            }}
+          >
             Projects
           </TabButton>
           <TabButton
             active={activeTab === "experience"}
-            onClick={() => setActiveTab("experience")}
+            onClick={() => {
+              setActiveTab("experience");
+              window.history.pushState(null, "", "#experience");
+            }}
           >
             Experience
           </TabButton>
